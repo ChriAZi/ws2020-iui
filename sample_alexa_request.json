@@ -1,0 +1,547 @@
+{
+	"version": "1.0",
+	"session": {
+		"new": false,
+		"sessionId": "amzn1.echo-api.session.3d48391c-3023-497d-b378-ab769eef96d5",
+		"application": {
+			"applicationId": "amzn1.ask.skill.da234de1-7bf3-45e4-aa81-70cb64b00ea3"
+		},
+		"user": {
+			"userId": "amzn1.ask.account.AGUJSCCEVEZW7YRZSXUVPFLMT7ALWKRTSAKCTW5JZ57B6B7VKGHZIB7YIFWMVIPRWZPMLXMDM4OULVTHPKJP2QSKFA53YAZUOCHJEY4WRFNEMQSGIJJVEXL5GDQ6NF7DHTBR6QBDIO7C2CB52CW4PHWY73WCEM5T72KZSWFA352FC5PFE2FPZATNOSBTUBDK6YFKIXO34RX54NQ"
+		}
+	},
+	"context": {
+		"Viewports": [
+			{
+				"type": "APL",
+				"id": "main",
+				"shape": "RECTANGLE",
+				"dpi": 160,
+				"presentationType": "STANDARD",
+				"canRotate": false,
+				"configuration": {
+					"current": {
+						"mode": "HUB",
+						"video": {
+							"codecs": [
+								"H_264_42",
+								"H_264_41"
+							]
+						},
+						"size": {
+							"type": "DISCRETE",
+							"pixelWidth": 1024,
+							"pixelHeight": 600
+						}
+					}
+				}
+			}
+		],
+		"Viewport": {
+			"experiences": [
+				{
+					"arcMinuteWidth": 246,
+					"arcMinuteHeight": 144,
+					"canRotate": false,
+					"canResize": false
+				}
+			],
+			"mode": "HUB",
+			"shape": "RECTANGLE",
+			"pixelWidth": 1024,
+			"pixelHeight": 600,
+			"dpi": 160,
+			"currentPixelWidth": 1024,
+			"currentPixelHeight": 600,
+			"touch": [
+				"SINGLE"
+			],
+			"video": {
+				"codecs": [
+					"H_264_42",
+					"H_264_41"
+				]
+			}
+		},
+		"Extensions": {
+			"available": {
+				"aplext:backstack:10": {}
+			}
+		},
+		"System": {
+			"application": {
+				"applicationId": "amzn1.ask.skill.da234de1-7bf3-45e4-aa81-70cb64b00ea3"
+			},
+			"user": {
+				"userId": "amzn1.ask.account.AGUJSCCEVEZW7YRZSXUVPFLMT7ALWKRTSAKCTW5JZ57B6B7VKGHZIB7YIFWMVIPRWZPMLXMDM4OULVTHPKJP2QSKFA53YAZUOCHJEY4WRFNEMQSGIJJVEXL5GDQ6NF7DHTBR6QBDIO7C2CB52CW4PHWY73WCEM5T72KZSWFA352FC5PFE2FPZATNOSBTUBDK6YFKIXO34RX54NQ"
+			},
+			"device": {
+				"deviceId": "amzn1.ask.device.AFKUZJGBRUYG6MTDYNBCJ3V3P2WUNF43DBFORXOOGYV6WKCU66WR642BB2SOA6JGS2ITY6OUS4JOI6GZXHXF27PLHR26W4IB6FJJBPKEUZ7JY77TKJTPUYIFD27V3C2VICAAW2ONJQPMG3UUIIIGKLQW3OVNOEPYAVBJZ7WQGX42Z23U6SZOC",
+				"supportedInterfaces": {}
+			},
+			"apiEndpoint": "https://api.amazonalexa.com",
+			"apiAccessToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImtpZCI6IjEifQ.eyJhdWQiOiJodHRwczovL2FwaS5hbWF6b25hbGV4YS5jb20iLCJpc3MiOiJBbGV4YVNraWxsS2l0Iiwic3ViIjoiYW16bjEuYXNrLnNraWxsLmRhMjM0ZGUxLTdiZjMtNDVlNC1hYTgxLTcwY2I2NGIwMGVhMyIsImV4cCI6MTYxMTY2MDU4NywiaWF0IjoxNjExNjYwMjg3LCJuYmYiOjE2MTE2NjAyODcsInByaXZhdGVDbGFpbXMiOnsiY29udGV4dCI6IkFBQUFBQUFBQUFDSy9xSENZMnVETG9JaUUzMWtEbEJaS2dFQUFBQUFBQUNQR1lmcFJ4WGNaRThEUHhoaUtCMEFaZ3VNcGRYbUN6R3d0aXlOSWVEWlBURmw4VHZDR2REY0R0U0Frc01mUXh0OEJuN0ZybSsyTWNKTWREck8xWGhaL2FjMFJSay9Pd2VXeWh5WmMrcXYzTjBTcXZvVDA4OGJIcGN2TnJLNWhkbVRYcm1CeVN0QVErM281TitQTDV0UlBjcmZ2dll0MVU2NFF0T1ZRazQzRVZzZEY4dTRJLzMwQXc5aFNYaTZpYnFJMzB3QTVrWTZNcjlIbnVnUjBDM0V0OEx2U2VudXhJMzErMDI1YTVCWXdjWXFFS1FMV0pHNlJ2MElFNStBcW4xU21YcEs2RHRJNUlhdzI3VVdRdUxvdlVtb3hNdGZOV2haWFBpSWRZSVdsRW5qMjgwaGdRK2dsbGp1cnVjdVlKY3BVZDZMa2hjdUtqS3Q2TktWVmtUanpIcm85WjlUcm9GeTVGUFgvZjNLbS9oSUp3ZmR5NlpydnpPUUJ5NS9VODJqZytCajBQYnQ0RWVzIiwiY29uc2VudFRva2VuIjpudWxsLCJkZXZpY2VJZCI6ImFtem4xLmFzay5kZXZpY2UuQUZLVVpKR0JSVVlHNk1URFlOQkNKM1YzUDJXVU5GNDNEQkZPUlhPT0dZVjZXS0NVNjZXUjY0MkJCMlNPQTZKR1MySVRZNk9VUzRKT0k2R1pYSFhGMjdQTEhSMjZXNElCNkZKSkJQS0VVWjdKWTc3VEtKVFBVWUlGRDI3VjNDMlZJQ0FBVzJPTkpRUE1HM1VVSUlJR0tMUVczT1ZOT0VQWUFWQkpaN1dRR1g0MloyM1U2U1pPQyIsInVzZXJJZCI6ImFtem4xLmFzay5hY2NvdW50LkFHVUpTQ0NFVkVaVzdZUlpTWFVWUEZMTVQ3QUxXS1JUU0FLQ1RXNUpaNTdCNkI3VktHSFpJQjdZSUZXTVZJUFJXWlBNTFhNRE00T1VMVlRIUEtKUDJRU0tGQTUzWUFaVU9DSEpFWTRXUkZORU1RU0dJSkpWRVhMNUdEUTZORjdESFRCUjZRQkRJTzdDMkNCNTJDVzRQSFdZNzNXQ0VNNVQ3MktaU1dGQTM1MkZDNVBGRTJGUFpBVE5PU0JUVUJESzZZRktJWE8zNFJYNTROUSJ9fQ.Aclm1alxcC6eziLminhcIwvkND9hKlGg9R8UmJHDMrRWLWR8pGTMGfdtTPl44xUhnT6ZSm34veprhzryb1cM6CwB4wpm3ekU46AQgo6oQEetyuNlBJZeL6VhcG-arxHoPQn-NDxgi5dG5cdSCT7TO6W1RI8AYDv5nI2TJgzDmIbUyn_6J3XWA0iTJXTeX75iCQ6YIFdi-u6_3faEKFNfmQjkPjnk8x02Fm-d02El1IvCmZ7o-g3ec3Z09eBEpz8gL6QwTz1oi0N44qD87XhO-uuA-nNTzV6sz_YrbYxVGMYu0gy2Voac0OrG74J-I-IXKpxrxyW4HA2FAsbJ2A1G9Q"
+		}
+	},
+	"request": {
+		"type": "IntentRequest",
+		"requestId": "amzn1.echo-api.request.6bbceb73-aea9-46c8-b079-53a2464e488d",
+		"locale": "en-US",
+		"timestamp": "2021-01-26T11:24:47Z",
+		"intent": {
+			"name": "GiftRecommendationIntent",
+			"confirmationStatus": "NONE",
+			"slots": {
+				"sports": {
+					"name": "sports",
+					"value": "5",
+					"resolutions": {
+						"resolutionsPerAuthority": [
+							{
+								"authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.da234de1-7bf3-45e4-aa81-70cb64b00ea3.scale",
+								"status": {
+									"code": "ER_SUCCESS_MATCH"
+								},
+								"values": [
+									{
+										"value": {
+											"name": "five",
+											"id": "30056e1cab7a61d256fc8edd970d14f5"
+										}
+									},
+									{
+										"value": {
+											"name": " 5",
+											"id": "aabf1eeeafba492fa8c7343c13f259a4"
+										}
+									}
+								]
+							}
+						]
+					},
+					"confirmationStatus": "NONE",
+					"source": "USER"
+				},
+				"tinkering": {
+					"name": "tinkering",
+					"value": "1",
+					"resolutions": {
+						"resolutionsPerAuthority": [
+							{
+								"authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.da234de1-7bf3-45e4-aa81-70cb64b00ea3.scale",
+								"status": {
+									"code": "ER_SUCCESS_MATCH"
+								},
+								"values": [
+									{
+										"value": {
+											"name": "1",
+											"id": "c4ca4238a0b923820dcc509a6f75849b"
+										}
+									},
+									{
+										"value": {
+											"name": "one",
+											"id": "f97c5d29941bfb1b2fdab0874906ab82"
+										}
+									}
+								]
+							}
+						]
+					},
+					"confirmationStatus": "NONE",
+					"source": "USER"
+				},
+				"technologicalAffinity": {
+					"name": "technologicalAffinity",
+					"value": "2",
+					"resolutions": {
+						"resolutionsPerAuthority": [
+							{
+								"authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.da234de1-7bf3-45e4-aa81-70cb64b00ea3.scale",
+								"status": {
+									"code": "ER_SUCCESS_MATCH"
+								},
+								"values": [
+									{
+										"value": {
+											"name": "2",
+											"id": "c81e728d9d4c2f636f067f89cc14862c"
+										}
+									},
+									{
+										"value": {
+											"name": "two",
+											"id": "b8a9f715dbb64fd5c56e7783c6820a61"
+										}
+									}
+								]
+							}
+						]
+					},
+					"confirmationStatus": "NONE",
+					"source": "USER"
+				},
+				"highActivity": {
+					"name": "highActivity",
+					"value": "5",
+					"resolutions": {
+						"resolutionsPerAuthority": [
+							{
+								"authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.da234de1-7bf3-45e4-aa81-70cb64b00ea3.scale",
+								"status": {
+									"code": "ER_SUCCESS_MATCH"
+								},
+								"values": [
+									{
+										"value": {
+											"name": "five",
+											"id": "30056e1cab7a61d256fc8edd970d14f5"
+										}
+									},
+									{
+										"value": {
+											"name": " 5",
+											"id": "aabf1eeeafba492fa8c7343c13f259a4"
+										}
+									}
+								]
+							}
+						]
+					},
+					"confirmationStatus": "NONE",
+					"source": "USER"
+				},
+				"reading": {
+					"name": "reading",
+					"value": "4",
+					"resolutions": {
+						"resolutionsPerAuthority": [
+							{
+								"authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.da234de1-7bf3-45e4-aa81-70cb64b00ea3.scale",
+								"status": {
+									"code": "ER_SUCCESS_MATCH"
+								},
+								"values": [
+									{
+										"value": {
+											"name": "4",
+											"id": "a87ff679a2f3e71d9181a67b7542122c"
+										}
+									},
+									{
+										"value": {
+											"name": "four",
+											"id": "8cbad96aced40b3838dd9f07f6ef5772"
+										}
+									}
+								]
+							}
+						]
+					},
+					"confirmationStatus": "NONE",
+					"source": "USER"
+				},
+				"lowActivity": {
+					"name": "lowActivity",
+					"value": "3",
+					"resolutions": {
+						"resolutionsPerAuthority": [
+							{
+								"authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.da234de1-7bf3-45e4-aa81-70cb64b00ea3.scale",
+								"status": {
+									"code": "ER_SUCCESS_MATCH"
+								},
+								"values": [
+									{
+										"value": {
+											"name": "3",
+											"id": "eccbc87e4b5ce2fe28308fd9f2a7baf3"
+										}
+									},
+									{
+										"value": {
+											"name": "three",
+											"id": "35d6d33467aae9a2e3dccb4b6b027878"
+										}
+									}
+								]
+							}
+						]
+					},
+					"confirmationStatus": "NONE",
+					"source": "USER"
+				},
+				"technology": {
+					"name": "technology",
+					"value": "2",
+					"resolutions": {
+						"resolutionsPerAuthority": [
+							{
+								"authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.da234de1-7bf3-45e4-aa81-70cb64b00ea3.scale",
+								"status": {
+									"code": "ER_SUCCESS_MATCH"
+								},
+								"values": [
+									{
+										"value": {
+											"name": "2",
+											"id": "c81e728d9d4c2f636f067f89cc14862c"
+										}
+									},
+									{
+										"value": {
+											"name": "two",
+											"id": "b8a9f715dbb64fd5c56e7783c6820a61"
+										}
+									}
+								]
+							}
+						]
+					},
+					"confirmationStatus": "NONE",
+					"source": "USER"
+				},
+				"creative": {
+					"name": "creative",
+					"value": "3",
+					"resolutions": {
+						"resolutionsPerAuthority": [
+							{
+								"authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.da234de1-7bf3-45e4-aa81-70cb64b00ea3.scale",
+								"status": {
+									"code": "ER_SUCCESS_MATCH"
+								},
+								"values": [
+									{
+										"value": {
+											"name": "3",
+											"id": "eccbc87e4b5ce2fe28308fd9f2a7baf3"
+										}
+									},
+									{
+										"value": {
+											"name": "three",
+											"id": "35d6d33467aae9a2e3dccb4b6b027878"
+										}
+									}
+								]
+							}
+						]
+					},
+					"confirmationStatus": "NONE",
+					"source": "USER"
+				},
+				"musicAndMovies": {
+					"name": "musicAndMovies",
+					"value": "4",
+					"resolutions": {
+						"resolutionsPerAuthority": [
+							{
+								"authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.da234de1-7bf3-45e4-aa81-70cb64b00ea3.scale",
+								"status": {
+									"code": "ER_SUCCESS_MATCH"
+								},
+								"values": [
+									{
+										"value": {
+											"name": "4",
+											"id": "a87ff679a2f3e71d9181a67b7542122c"
+										}
+									},
+									{
+										"value": {
+											"name": "four",
+											"id": "8cbad96aced40b3838dd9f07f6ef5772"
+										}
+									}
+								]
+							}
+						]
+					},
+					"confirmationStatus": "NONE",
+					"source": "USER"
+				},
+				"outdoor": {
+					"name": "outdoor",
+					"value": "4",
+					"resolutions": {
+						"resolutionsPerAuthority": [
+							{
+								"authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.da234de1-7bf3-45e4-aa81-70cb64b00ea3.scale",
+								"status": {
+									"code": "ER_SUCCESS_MATCH"
+								},
+								"values": [
+									{
+										"value": {
+											"name": "4",
+											"id": "a87ff679a2f3e71d9181a67b7542122c"
+										}
+									},
+									{
+										"value": {
+											"name": "four",
+											"id": "8cbad96aced40b3838dd9f07f6ef5772"
+										}
+									}
+								]
+							}
+						]
+					},
+					"confirmationStatus": "NONE",
+					"source": "USER"
+				},
+				"targetPerson": {
+					"name": "targetPerson",
+					"value": "girlfriend",
+					"resolutions": {
+						"resolutionsPerAuthority": [
+							{
+								"authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.da234de1-7bf3-45e4-aa81-70cb64b00ea3.targetPerson",
+								"status": {
+									"code": "ER_SUCCESS_NO_MATCH"
+								}
+							}
+						]
+					},
+					"confirmationStatus": "NONE",
+					"source": "USER"
+				},
+				"games": {
+					"name": "games",
+					"value": "5",
+					"resolutions": {
+						"resolutionsPerAuthority": [
+							{
+								"authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.da234de1-7bf3-45e4-aa81-70cb64b00ea3.scale",
+								"status": {
+									"code": "ER_SUCCESS_MATCH"
+								},
+								"values": [
+									{
+										"value": {
+											"name": "five",
+											"id": "30056e1cab7a61d256fc8edd970d14f5"
+										}
+									},
+									{
+										"value": {
+											"name": " 5",
+											"id": "aabf1eeeafba492fa8c7343c13f259a4"
+										}
+									}
+								]
+							}
+						]
+					},
+					"confirmationStatus": "NONE",
+					"source": "USER"
+				},
+				"indoor": {
+					"name": "indoor",
+					"value": "3",
+					"resolutions": {
+						"resolutionsPerAuthority": [
+							{
+								"authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.da234de1-7bf3-45e4-aa81-70cb64b00ea3.scale",
+								"status": {
+									"code": "ER_SUCCESS_MATCH"
+								},
+								"values": [
+									{
+										"value": {
+											"name": "3",
+											"id": "eccbc87e4b5ce2fe28308fd9f2a7baf3"
+										}
+									},
+									{
+										"value": {
+											"name": "three",
+											"id": "35d6d33467aae9a2e3dccb4b6b027878"
+										}
+									}
+								]
+							}
+						]
+					},
+					"confirmationStatus": "NONE",
+					"source": "USER"
+				},
+				"maxPrice": {
+					"name": "maxPrice",
+					"value": "100",
+					"confirmationStatus": "NONE",
+					"source": "USER"
+				},
+				"cooking": {
+					"name": "cooking",
+					"value": "4",
+					"resolutions": {
+						"resolutionsPerAuthority": [
+							{
+								"authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.da234de1-7bf3-45e4-aa81-70cb64b00ea3.scale",
+								"status": {
+									"code": "ER_SUCCESS_MATCH"
+								},
+								"values": [
+									{
+										"value": {
+											"name": "4",
+											"id": "a87ff679a2f3e71d9181a67b7542122c"
+										}
+									},
+									{
+										"value": {
+											"name": "four",
+											"id": "8cbad96aced40b3838dd9f07f6ef5772"
+										}
+									}
+								]
+							}
+						]
+					},
+					"confirmationStatus": "NONE",
+					"source": "USER"
+				},
+				"age": {
+					"name": "age",
+					"value": "23",
+					"confirmationStatus": "NONE",
+					"source": "USER"
+				},
+				"fashion": {
+					"name": "fashion",
+					"value": "4",
+					"resolutions": {
+						"resolutionsPerAuthority": [
+							{
+								"authority": "amzn1.er-authority.echo-sdk.amzn1.ask.skill.da234de1-7bf3-45e4-aa81-70cb64b00ea3.scale",
+								"status": {
+									"code": "ER_SUCCESS_MATCH"
+								},
+								"values": [
+									{
+										"value": {
+											"name": "4",
+											"id": "a87ff679a2f3e71d9181a67b7542122c"
+										}
+									},
+									{
+										"value": {
+											"name": "four",
+											"id": "8cbad96aced40b3838dd9f07f6ef5772"
+										}
+									}
+								]
+							}
+						]
+					},
+					"confirmationStatus": "NONE",
+					"source": "USER"
+				}
+			}
+		},
+		"dialogState": "COMPLETED"
+	}
+}
