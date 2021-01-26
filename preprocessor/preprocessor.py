@@ -1,6 +1,5 @@
 import pandas as pd
 import numpy as np
-import json
 
 from preprocessor.meta_categories import MetaCategories
 from preprocessor.categories import Categories
@@ -43,7 +42,7 @@ class PreProcessor:
                     for category in meta_category.value[1:]:
                         for category_value in category_values:
                             if category_value[0].value == category.value:
-                                category_value[1] += value[1]
+                                category_value[1] += (value[1] - 3)
 
         df_user_rating = pd.DataFrame(np.array(category_values),
                                       columns=['category', 'rating'])
