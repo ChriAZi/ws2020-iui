@@ -12,21 +12,16 @@ class MetaCategories(Enum):
                 Categories.ARTS)
     FASHION = ('fashion',
                Categories.CLOTHING,
-               Categories.FASHION,
-               Categories.BEAUTY,
                Categories.LUXURY)
     GAMES = ('games',
              Categories.GAMES,
              Categories.TOYS)
     READING = ('reading',
-               Categories.KINDLE,
-               Categories.MAGAZINES)
+               Categories.KINDLE)
     TECHNOLOGY = ('technology',
                   Categories.ELECTRONICS,
-                  Categories.CELLPHONES,
-                  Categories.SOFTWARE)
+                  Categories.CELLPHONES)
     MUSIC_AND_MOVIES = ('musicAndMovies',
-                        Categories.MUSIC,
                         Categories.CDS,
                         Categories.MOVIES)
     TINKERING = ('tinkering',
@@ -48,28 +43,21 @@ class MetaCategories(Enum):
                     Categories.KINDLE,
                     Categories.CDS,
                     Categories.GAMES,
-                    Categories.MAGAZINES,
-                    Categories.TOYS,
-                    Categories.MUSIC)
+                    Categories.TOYS)
     INDOOR = ('indoor',
               Categories.ARTS,
-              Categories.BEAUTY,
               Categories.CDS,
               Categories.CELLPHONES,
               Categories.CLOTHING,
               Categories.ELECTRONICS,
-              Categories.FASHION,
               Categories.GROCERY,
               Categories.HOME,
               Categories.INDUSTRIAL,
               Categories.INSTRUMENTS,
               Categories.KINDLE,
               Categories.LUXURY,
-              Categories.MAGAZINES,
               Categories.MOVIES,
-              Categories.MUSIC,
               Categories.PANTRY,
-              Categories.SOFTWARE,
               Categories.TOOLS,
               Categories.TOYS,
               Categories.GAMES)
