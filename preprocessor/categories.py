@@ -3,39 +3,52 @@ from enum import Enum
 
 class Categories(Enum):
     ARTS = ('Arts_Crafts_and_Sewing',
-            ['Keyword', 'Keyword2'])
+            ['Sewing', 'potter', 'tinkering', 'DIV', 'Design', 'creative', 'Knitting', 'painting', 'crochet', 'draw'])
     AUTOMOTIVE = ('Automotive',
-                  ['Keyword1', 'Keyword2'])
-    CDS = ('CDs_and_Vinyl', ['Keyword1', 'Keyword2'])
+                  ['car', 'vehicle', 'automotive', 'driving', 'motor', 'motorcycle', 'SUV', 'garage', 'truck', 'ride'])
+    CDS = ('CDs_and_Vinyl',
+           ['CD', 'Vinyl', 'Audio', 'Music', 'Sound', 'jukebox', 'recorder', 'radio', 'album', 'disc'])
     CELLPHONES = ('Cell_Phones_and_Accessories',
-                  ['Keyword1', 'Keyword2'])
+                  ['Phone', 'Cell Phone', 'Case', 'Charger', 'PopSockets', 'Headphones', 'Headset', 'Bluetooth',
+                   'mobil phone', 'mobile'])
     CLOTHING = ('Clothing_Shoes_and_Jewelry',
-                ['Keyword1', 'Keyword2'])
+                ['Jewelry', 'Clothing', 'Shoes', 'fashion', 'style', 'bag', 'clobber', 'accessories', 'watch', 'outfit',
+                 'look'])
     ELECTRONICS = ('Electronics',
-                   ['Keyword1', 'Keyword2'])
+                   ['Electronics', 'Technology', 'engineering', 'technique', 'Tablet', 'laptop', 'screen',
+                    'electronic device', 'electronic equipment', 'apparatus'])
     GROCERY = ('Grocery_and_Gourmet_Food',
-               ['Keyword1', 'Keyword2'])
+               ['Grocery', 'Gourmet', 'Food', 'meal', 'eat', 'drink', 'epicure', 'gastronome', 'gourmand', 'restaurant',
+                'pub', 'brasserie'])
     HOME = ('Home_and_Kitchen',
-            ['Keyword1', 'Keyword2'])
+            ['Home', 'Kitchen', 'cooking', 'baking', 'appliances', 'decoration', 'living', 'house', 'utensils',
+             'domestic'])
     INDUSTRIAL = ('Industrial_and_Scientific',
-                  ['Keyword1', 'Keyword2'])
+                  ['industrial', 'scientific', 'academic', 'scholarly', 'science', 'mechanical', 'technical',
+                   'analytical', 'manufacturing', 'tech'])
     INSTRUMENTS = ('Musical_Instruments',
-                   ['Keyword1', 'Keyword2'])
+                   ['Musical', 'Instruments', 'singing', 'playing an instrument', 'guitar', 'piano', 'make music',
+                    'play music', 'karaoke', 'performing'])
     KINDLE = ('Kindle_Store',
-              ['Keyword1', 'Keyword2'])
+              ['Kindle Store', 'Books', 'read', 'reading', 'fantasy', 'novel', 'story', 'Kindle', 'lecture', 'ebook',
+               'electronic book'])
     LUXURY = ('Luxury_Beauty',
-              ['Keyword1', 'Keyword2'])
+              ['luxury', 'beauty', 'opulence', 'luxurious', 'elegance', 'make-up', 'nails', 'glamour', 'pedicure',
+               'manicure'])
     MOVIES = ('Movies_and_TV',
-              ['Keyword1', 'Keyword2'])
+              ['Movies', 'TV', 'cinema', 'DVD', 'blu-ray', 'film', 'video', 'actor', 'television', 'watching'])
     PATIO = ('Patio_Lawn_and_Garden',
-             ['Keyword1', 'Keyword2'])
+             ['patio', 'lawn', 'garden', 'patch', 'flower', 'bed', 'plants', 'backyard', 'yard', 'court'])
     PANTRY = ('Prime_Pantry',
-              ['Keyword1', 'Keyword2'])
+              ['Prime Pantry', 'household', 'essentials', 'use', 'groceries', 'food', 'care package', 'useful',
+               'household article', 'victual'])
     SPORTS = ('Sports_and_Outdoors',
-              ['Sport'])
+              ['Sport', 'outdoor', 'outside', 'activity', 'hiking', 'walk', 'running', 'skiing', 'athletic', 'afoot'])
     TOOLS = ('Tools_and_Home_Improvement',
-             ['Keyword1', 'Keyword2'])
+             ['Tools', 'Home Improvement', 'handcrafted', 'drill', 'screw', 'bolt', 'hammer', 'improvement', 'construct',
+              'assemble', 'montage'])
     TOYS = ('Toys_and_Games',
-            ['Keyword1', 'Keyword2'])
+            ['Toy', 'Game', 'play', 'board game', 'cards', 'games night', 'table game', 'plaything', 'frolic', 'playing'])
     GAMES = ('Video_Games',
-             ['Keyword1', 'Keyword2'])
+             ['Video Games', 'gaming', 'computer games', 'electronic games', 'arcade', 'console', 'gambling', 'game',
+              'paddle', 'joy stick'])
