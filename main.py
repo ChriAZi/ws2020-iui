@@ -19,8 +19,8 @@ if __name__ == '__main__':
 
     recommended_category = Recommender.get_recommendations(fav_categories)
 
-    aws_id = 'AKIAYRUJDE3EEPC7BVVI'
-    aws_secret = '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'
+    aws_id = 'AWS_ID'
+    aws_secret = 'AWS_SECRET'
     client = boto3.client('s3', aws_access_key_id=aws_id,
                           aws_secret_access_key=aws_secret)
 
