@@ -10,11 +10,11 @@ if __name__ == '__main__':
     with open('sample_alexa_request.json') as json_file:
         request = json.load(json_file)
     PreProcessor = PreProcessor()
-    [user_vector, max_price] = PreProcessor.buildUserVector(request['request']['intent']['slots'])
+    [fav_categories, max_price] = PreProcessor.buildUserVector(request['request']['intent']['slots'])
 
     # Get Recommendations
     Recommender = Recommender()
-    [fav_category, recommended_category] = Recommender.get_recommendations(user_vector)
+    [recommended_category] = Recommender.get_recommendations(fav_categories)
 
     # Load Products
     csv_data = csv.DictReader(open('data/final_dataset_metadata.csv'))

@@ -45,5 +45,7 @@ class PreProcessor:
         df_user_rating = pd.DataFrame(np.array(category_values),
                                       columns=['category', 'rating'])
         df_user_rating["rating"] = pd.to_numeric(df_user_rating["rating"])
-
-        return [df_user_rating, max_price]
+        df_user_rating.sort_values(by=['rating'], ascending=False)
+        df_fav_categories = df_user_rating.iloc[0:2]
+        df_fav_categories = df_fav_categories.reset_index()
+        return [df_fav_categories, max_price]
