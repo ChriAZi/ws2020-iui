@@ -6,7 +6,8 @@ from preprocessor.categories import Categories
 
 
 class PreProcessor:
-    def buildUserVector(self, slots):
+    @staticmethod
+    def build_user_vector(slots):
         slot_values = []
         max_price = None
         category_values = [[Categories.ARTS, 0],
