@@ -1,5 +1,7 @@
 import csv
 import json
+import boto3
+from pandas import pandas as pd
 
 from filter.filter import Filter
 from recommender.recommender import Recommender
@@ -17,8 +19,18 @@ if __name__ == '__main__':
 
     recommended_category = Recommender.get_recommendations(fav_categories)
 
-    # Load Products
-    csv_data = csv.DictReader(open('data/final_dataset_metadata_sentiment.csv'))
+    aws_id = 'AKIAYRUJDE3EEPC7BVVI'
+    aws_secret = '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'
+    client = boto3.client('s3', aws_access_key_id=aws_id,
+                          aws_secret_access_key=aws_secret)
+
+    bucket_name = 'iui-csv-files'
+
+    object_key = 'data/final_dataset_metadata_sentiment.csv'
+    csv_obj = client.get_object(Bucket=bucket_name, Key=object_key)
+    df = pd.read_csv(csv_obj['Body'])
+    df = df.drop(columns=['Unnamed: 0'])
+    csv_data = df.to_dict(orient='records')
 
     # Filter Products
 
@@ -28,6 +40,3 @@ if __name__ == '__main__':
     products = Filter.sort_by_sentiment(products)
     product_list = Filter.create_speech(products)
     print(product_list)
-
-    # products(asin, title, price) -> sentiment analysis -> top three products(title, pricing)
-    # return top three products: "I have found three possible gifts for you. [for product in products speak(title, price)]

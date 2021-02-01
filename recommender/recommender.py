@@ -2,12 +2,12 @@ from preprocessor.categories import Categories
 
 from pandas import pandas as pd
 
-
 class Recommender:
     @staticmethod
     def get_recommendations(df_fav_categories):
         # load lookup table -> this contains the recommended category for various combinations of favorite categories
-        df_lookUp = pd.read_csv('recommender/look_up_table.csv')
+        url = 'https://raw.githubusercontent.com/ChriAZi/ws2020-iui/main/recommender/look_up_table.csv'
+        df_lookUp = pd.read_csv(url)
 
         # get favorite category
         df_fav_categories['category'] = df_fav_categories['category'].apply(lambda x: x.value)

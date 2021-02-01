@@ -7,9 +7,9 @@ class Filter:
     def filter_by_fav_category(data, fav_category, recommended_category):
         matches = []
         for row in data:
-            if recommended_category.value in row['category']:
+            if recommended_category.value in str(row['category']):
                 for keyword in Keywords[fav_category].value:
-                    if keyword in row['title']:
+                    if keyword in str(row['title']):
                         matches.append((row['asin'], row['title'], row['price'], row['AvgSenti']))
         return matches
 
