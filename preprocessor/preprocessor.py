@@ -1,8 +1,8 @@
 import pandas as pd
 import numpy as np
 
-from preprocessor.meta_categories import MetaCategories
-from preprocessor.categories import Categories
+from .categories import Categories
+from .meta_categories import MetaCategories
 
 
 class PreProcessor:

@@ -32,13 +32,13 @@ class Filter:
 
     @staticmethod
     def create_speech(products):
-        speech = ''
+        speech = 'I have found three possible gifts for you. '
         for idx, product in enumerate(products[:3]):
             if idx == 0:
-                speech = speech + 'The first product is ' + product[1] + ', which costs ' + product[2] + '.'
+                speech = speech + 'My first idea is ' + product[1] + ', which costs ' + product[2] + ' Dollars.'
             elif idx == 1:
-                speech = speech + ' My second idea for a present is ' + product[1] + ', which costs ' + product[2] + '.'
+                speech = speech + ' The second product for a present is ' + product[1] + ', which costs ' + product[2] + ' Dollars.'
             elif idx == 2:
                 speech = speech + ' And lastly, my final recommendation for you is ' + product[1] + ', which costs ' + \
-                         product[2] + '.'
+                         product[2] + ' Dollars. I hope some of these ideas are helpful to you.'
         return speech

@@ -1,42 +1,52 @@
-import csv
-import json
-import boto3
-from pandas import pandas as pd
+import os
+from dotenv import load_dotenv
+from flask import Flask
+from flask_ask import Ask, statement, question, request
 
 from filter.filter import Filter
-from recommender.recommender import Recommender
 from preprocessor.preprocessor import PreProcessor
+from recommender.recommender import Recommender
+from repository.repository import Repository
 
-if __name__ == '__main__':
-    # Get Slot Values
-    with open('sample_alexa_request.json') as json_file:
-        request = json.load(json_file)
-    PreProcessor = PreProcessor()
-    [fav_categories, max_price] = PreProcessor.build_user_vector(request['request']['intent']['slots'])
+app = Flask(__name__)
+ask = Ask(app, '/')
+load_dotenv()
+
+
+@ask.launch
+def start_skill():
+    startup_message = "Hi and welcome to 'Secret Santa'. I can help you find a birthday or christmas present \
+    for a family member. Just say 'Alexa, help me find a present!'."
+    return question(startup_message)
+
+
+@ask.intent('GiftRecommendationIntent')
+def handle_slot_values():
+    recommended_products = get_present_recommendations(request)
+    speech_output = Filter.create_speech(recommended_products)
+    return statement(speech_output)
+
+
+def get_present_recommendations(skill_request):
+    # Get Slot Values from Alexa Request
+    [fav_categories, max_price] = PreProcessor.build_user_vector(skill_request.intent.slots)
 
     # Get Recommendations
-    Recommender = Recommender()
-
     recommended_category = Recommender.get_recommendations(fav_categories)
 
-    aws_id = 'AWS_ID'
-    aws_secret = 'AWS_SECRET'
-    client = boto3.client('s3', aws_access_key_id=aws_id,
-                          aws_secret_access_key=aws_secret)
+    # Load Products from CSV
+    df_product_db = Repository.get_csv_from_s3(os.getenv("BUCKET_NAME"), os.getenv("PRODUCT_CSV"))
 
-    bucket_name = 'iui-csv-files'
-
-    object_key = 'data/final_dataset_metadata_sentiment.csv'
-    csv_obj = client.get_object(Bucket=bucket_name, Key=object_key)
-    df = pd.read_csv(csv_obj['Body'])
-    df = df.drop(columns=['Unnamed: 0'])
-    csv_data = df.to_dict(orient='records')
+    # Cleanup Products
+    df_product_db.drop(columns=['Unnamed: 0'], inplace=True)
+    csv_data = df_product_db.to_dict(orient='records')
 
     # Filter Products
-
-    Filter = Filter()
     products = Filter.filter_by_fav_category(csv_data, fav_categories.category.loc[0], recommended_category)
     products = Filter.filter_by_pricing(products, max_price)
     products = Filter.sort_by_sentiment(products)
-    product_list = Filter.create_speech(products)
-    print(product_list)
+    return products
+
+
+if __name__ == '__main__':
+    app.run(debug=True)
