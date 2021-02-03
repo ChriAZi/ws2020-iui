@@ -1,4 +1,4 @@
-# Intelligent User Interfaces Project
+# WS2020/21 LMU Munich: Intelligent User Interfaces Project
 
 ### Alexa Skill
 The Alexa Skill provides the user facing interaction with our service. It handles the voice in- and output and sends all relevant data to the backend for further processing. The skill is called 'Secret Santa' and can be invoked by saying: 'Alexa, start Secret Santa.'. Following the instructions provided by the Voice User Interface (VUI), the user answers a variety of questions filling the relevant 'Slots' of our ```GiftRecommendationIntent```. Every answer the user gives is checked for validity and ultimately forwarded to the backend.
