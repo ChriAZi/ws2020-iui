@@ -24,7 +24,7 @@ pip install -r requirements.txt && pip install https://github.com/johnwheeler/fl
  ```
 python main.py
 ```
- 6. Now run the ngrok service using the following command
+ 6. Now run the ngrok service using the following command in the directory you installed it in
 ```
 ./ngrok http 5000 
 ```
