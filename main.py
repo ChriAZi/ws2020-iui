@@ -1,5 +1,4 @@
 import csv
-from dotenv import load_dotenv
 from flask import Flask
 from flask_ask import Ask, statement, question, request
 
@@ -9,7 +8,6 @@ from recommender.recommender import Recommender
 
 app = Flask(__name__)
 ask = Ask(app, '/')
-load_dotenv()
 
 
 @ask.launch
