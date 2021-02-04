@@ -14,22 +14,27 @@ The backend handles all relevant data from the user. It reads the slot values co
 
 ##### Setup Steps
   1. Clone the code from our [Github](https://github.com/ChriAZi/ws2020-iui) using the credentials provided in the submission
-  2. Once cloned place the ```.env``` file provided in the submission at the root folder of the project
+  2. Once cloned place data folder at the root provided in the submission at the root folder of the project
   3. Install all necessary packages using pip 
 ```
-pip install -r requirements.txt && pip install https://github.com/johnwheeler/flask-ask/archive/master.zip
+pip install -r requirements.txt
+```
+```
+pip install https://github.com/johnwheeler/flask-ask/archive/master.zip
 ```
  4. Go to [Ngrok](https://ngrok.com/), login with the credentials provided in the submission, to download their software and follow their setup process.
  5. Once finished, run the ```main.py``` file
  ```
 python main.py
 ```
- 6. Now run the ngrok service using the following command in the directory you installed it in
+ 6. Now run the ngrok service using the following command in the directory you installed ngrok in
 ```
 ./ngrok http 5000 
 ```
 7. You should now have the python server running on ```localhost:5000```and the ngrok service bridging the connection to an http and an https server
+
 ![Ngrok Setup](images/ngrok-setup.png "Ngrok Setup")
+
 8. Now, copy the HTTPS server-adress ending in ```ngrok.io```to your clipboard
 9. Follow the Setup Process of the Alexa Skill described above and navigate to the 'IUIPrototyp'-Skill
 10. In the left panel, click endpoint, choose HTTPS (if not already selected) and paste the copied link in the input field for default region
@@ -39,5 +44,5 @@ python main.py
 ### Additional Information
  - The backend only handles the absolut minimum of data to increase performance
  - It utilizes pre-built lookup-tables for the recommender-system and the sentiment-values
- - The needed CSV files are provided through an AWS-S3-Bucket
+ - The needed CSV files are provided through the data folder
  - The actual code for the NLP and the Recommender-System can be found in the notebooks folder in the respective Python Notebooks
