@@ -14,7 +14,7 @@ The backend handles all relevant data from the user. It reads the slot values co
 
 ##### Setup Steps
   1. Clone the code from our [Github](https://github.com/ChriAZi/ws2020-iui) using the credentials provided in the submission
-  2. Once cloned place data folder at the root provided in the submission at the root folder of the project
+  2. Once cloned place the data folder provided in the submission at the root folder of the project
   3. Install all necessary packages using pip 
 ```
 pip install -r requirements.txt
