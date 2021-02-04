@@ -1,4 +1,4 @@
-import os
+import csv
 from dotenv import load_dotenv
 from flask import Flask
 from flask_ask import Ask, statement, question, request
@@ -6,7 +6,6 @@ from flask_ask import Ask, statement, question, request
 from filter.filter import Filter
 from preprocessor.preprocessor import PreProcessor
 from recommender.recommender import Recommender
-from repository.repository import Repository
 
 app = Flask(__name__)
 ask = Ask(app, '/')
@@ -34,12 +33,8 @@ def get_present_recommendations(skill_request):
     # Get Recommendations
     recommended_category = Recommender.get_recommendations(fav_categories)
 
-    # Load Products from CSV
-    df_product_db = Repository.get_csv_from_s3(os.getenv("BUCKET_NAME"), os.getenv("PRODUCT_CSV"))
-
-    # Cleanup Products
-    df_product_db.drop(columns=['Unnamed: 0'], inplace=True)
-    csv_data = df_product_db.to_dict(orient='records')
+    # Load Data from CSV
+    csv_data = csv.DictReader(open('data/final_dataset_metadata_sentiment.csv'))
 
     # Filter Products
     products = Filter.filter_by_fav_category(csv_data, fav_categories.category.loc[0], recommended_category)

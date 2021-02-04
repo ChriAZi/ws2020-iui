@@ -1,15 +1,11 @@
-import os
-
+import pandas as pd
 from preprocessor.categories import Categories
-
-from repository.repository import Repository
 
 
 class Recommender:
     @staticmethod
     def get_recommendations(df_fav_categories):
-        # load lookup table -> this contains the recommended category for various combinations of favorite categories
-        df_look_up = Repository.get_csv_from_s3(os.getenv("BUCKET_NAME"), os.getenv("LOOKUP_CSV"))
+        df_look_up = pd.read_csv('data/look_up_table.csv')
 
         # get favorite category
         df_fav_categories['category'] = df_fav_categories['category'].apply(lambda x: x.value)
