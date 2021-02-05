@@ -35,10 +35,10 @@ class Filter:
         speech = 'I have found three possible gifts for you. '
         for idx, product in enumerate(products[:3]):
             if idx == 0:
-                speech = speech + 'My first idea is ' + product[1] + ', which costs ' + product[2] + ' Dollars.'
+                speech = speech + 'My first idea is ' + ' '.join(product[1].split()[:3]) + ', which costs ' + product[2] + ' Dollars.'
             elif idx == 1:
-                speech = speech + ' The second product for a present is ' + product[1] + ', which costs ' + product[2] + ' Dollars.'
+                speech = speech + ' The second product for a present is ' + ' '.join(product[1].split()[:3]) + ', which costs ' + product[2] + ' Dollars.'
             elif idx == 2:
-                speech = speech + ' And lastly, my final recommendation for you is ' + product[1] + ', which costs ' + \
+                speech = speech + ' And lastly, my final recommendation for you is ' + ' '.join(product[1].split()[:3]) + ', which costs ' + \
                          product[2] + ' Dollars. I hope some of these ideas are helpful to you.'
         return speech
