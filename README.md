@@ -1,5 +1,8 @@
 # WS2020/21 LMU Munich: Intelligent User Interfaces Project
 
+## Important
+The Alexa Skill times out if the request takes more than 8 seconds. To make sure the application runs successfully, use a machine with sufficient ressources when starting the local server.
+
 ### Alexa Skill
 The Alexa Skill provides the user facing interaction with our service. It handles the voice in- and output and sends all relevant data to the backend for further processing. The skill is called 'Secret Santa' and can be invoked by saying: 'Alexa, start Secret Santa.'. Following the instructions provided by the Voice User Interface (VUI), the user answers a variety of questions filling the relevant 'Slots' of our ```GiftRecommendationIntent```. Every answer the user gives is checked for validity and ultimately forwarded to the backend.
 
@@ -14,7 +17,7 @@ The backend handles all relevant data from the user. It reads the slot values co
 
 ##### Setup Steps
   1. Clone the code from our [Github](https://github.com/ChriAZi/ws2020-iui) using the credentials provided in the submission
-  2. Once cloned place data folder at the root provided in the submission at the root folder of the project
+  2. Once cloned place the data folder provided in the submission at the root folder of the project
   3. Install all necessary packages using pip 
 ```
 pip install -r requirements.txt
