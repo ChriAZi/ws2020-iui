@@ -9,7 +9,8 @@ class MetaCategories(Enum):
                Categories.GROCERY)
     CREATIVE = ('creative',
                 Categories.INSTRUMENTS,
-                Categories.ARTS)
+                Categories.ARTS,
+                Categories.TOOLS)
     FASHION = ('fashion',
                Categories.CLOTHING,
                Categories.LUXURY)
@@ -20,7 +21,8 @@ class MetaCategories(Enum):
                Categories.KINDLE)
     TECHNOLOGY = ('technology',
                   Categories.ELECTRONICS,
-                  Categories.CELLPHONES)
+                  Categories.CELLPHONES,
+                  Categories.TOOLS)
     MUSIC_AND_MOVIES = ('musicAndMovies',
                         Categories.CDS,
                         Categories.MOVIES)
@@ -37,7 +39,8 @@ class MetaCategories(Enum):
                      Categories.ARTS,
                      Categories.PATIO,
                      Categories.TOOLS,
-                     Categories.SPORTS)
+                     Categories.SPORTS,
+                     Categories.INDUSTRIAL)
     LOW_ACTIVITY = ('lowActivity',
                     Categories.MOVIES,
                     Categories.KINDLE,
