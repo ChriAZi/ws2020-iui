@@ -25,6 +25,18 @@ pip install -r requirements.txt
 ```
 pip install https://github.com/johnwheeler/flask-ask/archive/master.zip
 ```
+  For **windows**: it was necessary to install openssl with the [chocolatey package manager](https://chocolatey.org/packages/openssl)
+```
+choco install openssl -pre -y
+```
+```
+$env:LIB = (Resolve-Path -Path "$env:OPENSSL_CONF\..\..\lib"); $env:INCLUDE = (Resolve-Path -Path "$env:OPENSSL_CONF\..\..\include")
+& python.exe -m pip install -U cryptography
+```
+```
+pip install flask_ask
+```
+
  4. Go to [Ngrok](https://ngrok.com/), login with the credentials provided in the submission, to download their software and follow their setup process.
  5. Once finished, run the ```main.py``` file
  ```
