@@ -1,7 +1,7 @@
 # WS2020/21 LMU Munich: Intelligent User Interfaces Project
 
 ## Important
-The Alexa Skill times out if the request takes more than 8 seconds. To make sure the application runs successfully, use a machine with sufficient ressources when starting the local server.
+The Alexa Skill times out if the request takes more than ```8 seconds```. To make sure the application runs successfully, use a machine with sufficient resources when starting the local server. Also, if possible, test the application on either linux or macOS to be sure it works. There seems to be an issue with the ````flask-ask```` package on Windows and its cryptographic libraries. 
 
 ### Alexa Skill
 The Alexa Skill provides the user facing interaction with our service. It handles the voice in- and output and sends all relevant data to the backend for further processing. The skill is called 'Secret Santa' and can be invoked by saying: 'Alexa, start Secret Santa.'. Following the instructions provided by the Voice User Interface (VUI), the user answers a variety of questions filling the relevant 'Slots' of our ```GiftRecommendationIntent```. Every answer the user gives is checked for validity and ultimately forwarded to the backend.
