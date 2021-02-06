@@ -35,7 +35,7 @@ def get_present_recommendations(skill_request):
     csv_data = csv.DictReader(open('data/final_dataset_metadata_sentiment.csv'))
 
     # Filter Products
-    products = Filter.filter_by_fav_category(csv_data, fav_categories.category.loc[0], recommended_category)
+    products = Filter.extract_products(csv_data, recommended_category)
     products = Filter.filter_by_pricing(products, max_price)
     products = Filter.sort_by_sentiment(products)
     return products

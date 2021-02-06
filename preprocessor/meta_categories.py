@@ -29,8 +29,7 @@ class MetaCategories(Enum):
     TINKERING = ('tinkering',
                  Categories.AUTOMOTIVE,
                  Categories.PATIO,
-                 Categories.TOOLS,
-                 Categories.INDUSTRIAL)
+                 Categories.TOOLS)
     SPORTS = ('sports',
               Categories.SPORTS)
     HIGH_ACTIVITY = ('highActivity',
@@ -39,8 +38,7 @@ class MetaCategories(Enum):
                      Categories.ARTS,
                      Categories.PATIO,
                      Categories.TOOLS,
-                     Categories.SPORTS,
-                     Categories.INDUSTRIAL)
+                     Categories.SPORTS)
     LOW_ACTIVITY = ('lowActivity',
                     Categories.MOVIES,
                     Categories.KINDLE,
